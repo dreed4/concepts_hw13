@@ -1,0 +1,17 @@
+<h1>Password Generator</h1>
+<h2>Hit the generate button and a password will be generated for you!</h2>
+
+
+
+<%= form_tag passmaker_index_path, :method => :get do %>
+    <%= label_tag(:size, "Password Size (default is 9 characters, maximum of 30):") %>
+    <%= text_field_tag(:size) %>
+    </br>
+    <%= submit_tag("Generate") %>
+<% end %>
+
+</br>
+<h3>Password</h3>
+<%= @output2 %>
+<h3>Mnemonic for Memorization</h3>
+<%= @mnemonic %>
